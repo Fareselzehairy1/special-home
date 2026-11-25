@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>المشاريع | Special Home — عقارات المعادي والقاهرة الجديدة</title>
+<meta name="description" content="تصفح مشاريع Special Home العقارية: شقق، دوبلكس، تاون هاوس وفيلات في المعادي والقاهرة الجديدة والشروق — أسعار بالجنيه والدولار مع جولات 360°.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='24' fill='%231a56db'/><path d='M22 52 50 26l28 26v26H60V64H40v14H22z' fill='%23fff'/></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Tajawal:wght@300;400;500;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header" id="siteHeader">
+  <div class="container header-inner">
+    <a href="index.html" class="logo">
+      <span class="logo-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/><path d="M9.5 21v-6h5v6"/></svg></span>
+      <span class="logo-text"><span class="logo-name">Special <span>Home</span></span><span class="logo-tag">سبشال هوم للتطوير العقاري</span></span>
+    </a>
+    <nav class="main-nav" id="mainNav">
+      <a class="nav-link" href="index.html">رئيسية</a>
+      <a class="nav-link active" href="projects.html">المشاريع</a>
+      <a class="nav-link" href="about.html">عن الشركة</a>
+      <a class="nav-link" href="blog.html">المدونة</a>
+      <a class="nav-link" href="contact.html">تواصل معنا</a>
+    </nav>
+    <a href="contact.html#form" class="btn btn-emerald btn-sm header-cta">اطلب استشارة مجانية</a>
+    <button class="nav-toggle" id="navToggle" aria-label="فتح القائمة"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="container">
+    <nav class="breadcrumb" data-aos="fade-up">
+      <a href="index.html">الرئيسية</a><span class="sep">/</span><span class="here">المشاريع</span>
+    </nav>
+    <h1 data-aos="fade-up">مشاريع <span style="color:#5eead4">Special Home</span></h1>
+    <p data-aos="fade-up" data-aos-delay="100">ستة مشاريع متاحة الآن في المعادي والقاهرة الجديدة — فلترة ذكية حسب النوع والمنطقة والسعر والمساحة، وكل وحدة بها جولة افتراضية 360°.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+
+    <!-- FILTER BAR -->
+    <div class="filter-bar" id="filterBar" data-aos="fade-up">
+      <div class="filter-group">
+        <label for="fType">نوع العقار</label>
+        <select id="fType">
+          <option value="">الكل</option>
+          <option value="شقة">شقة</option>
+          <option value="دوبلكس">دوبلكس</option>
+          <option value="تاون هاوس">تاون هاوس</option>
+          <option value="فيلا">فيلا</option>
+        </select>
+      </div>
+      <div class="filter-group">
+        <label for="fCity">المنطقة</label>
+        <select id="fCity">
+          <option value="">الكل</option>
+          <option value="المعادي">المعادي</option>
+          <option value="القاهرة الجديدة">القاهرة الجديدة</option>
+          <option value="مصر الجديدة">مصر الجديدة</option>
+          <option value="الشروق">الشروق</option>
+        </select>
+      </div>
+      <div class="filter-group">
+        <label for="fPrice">السعر (جنيه)</label>
+        <select id="fPrice">
+          <option value="">الكل</option>
+          <option value="low">أقل من 3 مليون</option>
+          <option value="3000000-5000000">3 – 5 مليون</option>
+          <option value="5000000-8000000">5 – 8 مليون</option>
+          <option value="high">أكثر من 8 مليون</option>
+        </select>
+      </div>
+      <div class="filter-group">
+        <label for="fArea">المساحة (م²)</label>
+        <select id="fArea">
+          <option value="">الكل</option>
+          <option value="s">أقل من 100</option>
+          <option value="m">100 – 150</option>
+          <option value="l">150 – 200</option>
+          <option value="xl">أكثر من 200</option>
+        </select>
+      </div>
+      <button class="btn btn-outline" type="button" id="resetFilters">إعادة ضبط</button>
+    </div>
+
+    <div class="results-bar">
+      <div class="results-count">عدد النتائج: <b id="resultsCount">6</b> عقار</div>
+      <div class="tag-row">
+        <span class="pill gold">تحديث الأسعار: نوفمبر 2026</span>
+        <span class="pill">أسعار تشمل خطة السداد</span>
+      </div>
+    </div>
+
+    <!-- PROPERTY GRID -->
+    <div class="property-grid" id="propertyGrid">
+
+      <article class="property-card" data-type="شقة" data-city="القاهرة الجديدة" data-price="3650000" data-area="135" data-aos="fade-up">
+        <div class="card-inner">
+          <div class="card-media">
+            <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=800&q=70" alt="كايرو فيو ريزيدنس" loading="lazy">
+            <div class="card-badges"><span class="badge badge-available">متاح</span><span class="badge badge-type">شقة</span></div>
+            <span class="card-360">◎ 360°</span>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">كايرو فيو ريزيدنس</h3>
+            <div class="card-title-en">Cairo View Residence</div>
+            <div class="card-loc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg> القاهرة الجديدة — التجمع الخامس (5 دقائق من العاصمة)</div>
+            <div class="card-meta">
+              <span class="meta-chip">المساحة <b>135</b> م²</span>
+              <span class="meta-chip"><b>3</b> غرف نوم</span>
+              <span class="meta-chip">دور أرضي + 1</span>
+            </div>
+            <div class="card-price">
+              <div class="price-block">
+                <span class="price-label">يبدأ من</span>
+                <span class="price">3,650,000 ج.م</span>
+                <span class="price-alt">≈ $73,000</span>
+              </div>
+              <span class="pill gold">تقسيط 8 سنوات</span>
+            </div>
+            <div class="card-actions">
+              <a href="project-details.html" class="btn btn-primary btn-sm">تفاصيل أكثر</a>
+              <a href="project-details.html#tour" class="btn btn-outline btn-sm">جولة افتراضية</a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="property-card" data-type="فيلا" data-city="المعادي" data-price="8900000" data-area="260" data-aos="fade-up" data-aos-delay="90">
+        <div class="card-inner">
+          <div class="card-media">
+            <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=800&q=70" alt="ميادين المعادي" loading="lazy">
+            <div class="card-badges"><span class="badge badge-reserved">محجوز</span><span class="badge badge-type">فيلا</span></div>
+            <span class="card-360">◎ 360°</span>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">ميادين المعادي</h3>
+            <div class="card-title-en">Maadi Meadows</div>
+            <div class="card-loc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg> القاهرة — المعادي، شارع النصر (3 دقائق من مترو المعادي)</div>
+            <div class="card-meta">
+              <span class="meta-chip">المساحة <b>260</b> م²</span>
+              <span class="meta-chip"><b>5</b> غرف نوم</span>
+              <span class="meta-chip">حديقة خاصة</span>
+            </div>
+            <div class="card-price">
+              <div class="price-block">
+                <span class="price-label">السعر</span>
+                <span class="price">8,900,000 ج.م</span>
+                <span class="price-alt">≈ $178,000</span>
+              </div>
+              <span class="pill">تسليم جاهز</span>
+            </div>
+            <div class="card-actions">
+              <a href="project-details.html" class="btn btn-primary btn-sm">تفاصيل أكثر</a>
+              <a href="project-details.html#tour" class="btn btn-outline btn-sm">جولة افتراضية</a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="property-card" data-type="شقة" data-city="مصر الجديدة" data-price="2750000" data-area="95" data-aos="fade-up" data-aos-delay="180">
+        <div class="card-inner">
+          <div class="card-media">
+            <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=800&q=70" alt="بانوراما ناينتي" loading="lazy">
+            <div class="card-badges"><span class="badge badge-available">متاح</span><span class="badge badge-type">شقة</span></div>
+            <span class="card-360">◎ 360°</span>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">بانوراما ناينتي</h3>
+            <div class="card-title-en">Panorama 90</div>
+            <div class="card-loc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg> مصر الجديدة — شارع الثورة (7 دقائق من ميدان الجامع)</div>
+            <div class="card-meta">
+              <span class="meta-chip">المساحة <b>95</b> م²</span>
+              <span class="meta-chip"><b>2</b> غرفة نوم</span>
+              <span class="meta-chip">دور 7</span>
+            </div>
+            <div class="card-price">
+              <div class="price-block">
+                <span class="price-label">يبدأ من</span>
+                <span class="price">2,750,000 ج.م</span>
+                <span class="price-alt">≈ $55,000</span>
+              </div>
+              <span class="pill gold">موقف مجاني</span>
+            </div>
+            <div class="card-actions">
+              <a href="project-details.html" class="btn btn-primary btn-sm">تفاصيل أكثر</a>
+              <a href="project-details.html#tour" class="btn btn-outline btn-sm">جولة افتراضية</a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="property-card" data-type="تاون هاوس" data-city="الشروق" data-price="5400000" data-area="180" data-aos="fade-up">
+        <div class="card-inner">
+          <div class="card-media">
+            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=70" alt="أوكاسيا تاون" loading="lazy">
+            <div class="card-badges"><span class="badge badge-available">متاح</span><span class="badge badge-type">تاون هاوس</span></div>
+            <span class="card-360">◎ 360°</span>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">أوكاسيا تاون</h3>
+            <div class="card-title-en">Oakasia Town</div>
+            <div class="card-loc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg> الشروق — كمبوند النخيل (على بعد 10 دقائق من العين السخنة)</div>
+            <div class="card-meta">
+              <span class="meta-chip">المساحة <b>180</b> م²</span>
+              <span class="meta-chip"><b>4</b> غرف نوم</span>
+              <span class="meta-chip">تاون مستقل</span>
+            </div>
+            <div class="card-price">
+              <div class="price-block">
+                <span class="price-label">يبدأ من</span>
+                <span class="price">5,400,000 ج.م</span>
+                <span class="price-alt">≈ $108,000</span>
+              </div>
+              <span class="pill gold">مسبح مشترك</span>
+            </div>
+            <div class="card-actions">
+              <a href="project-details.html" class="btn btn-primary btn-sm">تفاصيل أكثر</a>
+              <a href="project-details.html#tour" class="btn btn-outline btn-sm">جولة افتراضية</a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="property-card" data-type="دوبلكس" data-city="المعادي" data-price="6750000" data-area="210" data-aos="fade-up" data-aos-delay="90">
+        <div class="card-inner">
+          <div class="card-media">
+            <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=800&q=70" alt="ريزيدنس النيل" loading="lazy">
+            <div class="card-badges"><span class="badge badge-sold">مباع</span><span class="badge badge-type">دوبلكس</span></div>
+            <span class="card-360">◎ 360°</span>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">ريزيدنس النيل</h3>
+            <div class="card-title-en">Nile Residence</div>
+            <div class="card-loc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg> القاهرة — المعادي، كورنيش النيل (إطلالة مائية)</div>
+            <div class="card-meta">
+              <span class="meta-chip">المساحة <b>210</b> م²</span>
+              <span class="meta-chip"><b>4</b> غرف نوم</span>
+              <span class="meta-chip">تيراس 45 م²</span>
+            </div>
+            <div class="card-price">
+              <div class="price-block">
+                <span class="price-label">السعر عند البيع</span>
+                <span class="price">6,750,000 ج.م</span>
+                <span class="price-alt">≈ $135,000</span>
+              </div>
+              <span class="pill">باقي وحدة مشابهة</span>
+            </div>
+            <div class="card-actions">
+              <a href="project-details.html" class="btn btn-primary btn-sm">تفاصيل أكثر</a>
+              <a href="contact.html#form" class="btn btn-outline btn-sm">قائمة الانتظار</a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="property-card" data-type="فيلا" data-city="القاهرة الجديدة" data-price="12500000" data-area="340" data-aos="fade-up" data-aos-delay="180">
+        <div class="card-inner">
+          <div class="card-media">
+            <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&q=70" alt="فيلا داون تاون" loading="lazy">
+            <div class="card-badges"><span class="badge badge-available">متاح</span><span class="badge badge-type">فيلا</span></div>
+            <span class="card-360">◎ 360°</span>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">فيلا داون تاون</h3>
+            <div class="card-title-en">Downtown Villa</div>
+            <div class="card-loc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg> القاهرة الجديدة — حي الرحاب (على بعد 15 دقيقة من القاهرة الجديدة)</div>
+            <div class="card-meta">
+              <span class="meta-chip">المساحة <b>340</b> م²</span>
+              <span class="meta-chip"><b>6</b> غرف نوم</span>
+              <span class="meta-chip">مسبح خاص</span>
+            </div>
+            <div class="card-price">
+              <div class="price-block">
+                <span class="price-label">السعر</span>
+                <span class="price">12,500,000 ج.م</span>
+                <span class="price-alt">≈ $250,000</span>
+              </div>
+              <span class="pill gold">استلام 2027</span>
+            </div>
+            <div class="card-actions">
+              <a href="project-details.html" class="btn btn-primary btn-sm">تفاصيل أكثر</a>
+              <a href="project-details.html#tour" class="btn btn-outline btn-sm">جولة افتراضية</a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <div class="empty-state" id="emptyState" style="display:none">
+        <div class="es-ico">🏠</div>
+        <h3>لا توجد نتائج مطابقة</h3>
+        <p>جرّب تعديل الفلاتر أو تواصل معنا لنتوصّل لوحدة تناسبك خارج القائمة.</p>
+        <a href="https://wa.me/201001234567" target="_blank" rel="noopener" class="btn btn-emerald" style="margin-top:16px">راسلنا على الواتساب</a>
+      </div>
+    </div>
+
+    <div class="stats-band" style="margin-top:56px" data-aos="zoom-in">
+      <div class="stat-item"><span class="stat-num"><span class="counter" data-target="25">0</span><span class="suffix">+</span></span><span class="stat-label">مشروع منفّذ</span></div>
+      <div class="stat-item"><span class="stat-num"><span class="counter" data-target="480">0</span><span class="suffix">+</span></span><span class="stat-label">عميل سعيد</span></div>
+      <div class="stat-item"><span class="stat-num"><span class="counter" data-target="10">0</span><span class="suffix">+</span></span><span class="stat-label">سنوات خبرة</span></div>
+      <div class="stat-item"><span class="stat-num"><span class="counter" data-target="96">0</span><span class="suffix">%</span></span><span class="stat-label">رضا العملاء</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-section">
+  <div class="container cta-inner">
+    <div data-aos="fade-up">
+      <h2>مالكيت الوحدة المناسبة في وسط القائمة؟</h2>
+      <p>احجز جولة افتراضية أو موعد معاينة في نفس اليوم.</p>
+    </div>
+    <div class="cta-actions" data-aos="fade-up" data-aos-delay="100">
+      <a href="project-details.html#tour" class="btn btn-white">اطلب جولة افتراضية</a>
+      <a href="https://wa.me/201001234567" target="_blank" rel="noopener" class="btn btn-ghost-light">تواصل على الواتساب</a>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <a href="index.html" class="logo" style="margin-bottom:16px">
+          <span class="logo-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/><path d="M9.5 21v-6h5v6"/></svg></span>
+          <span class="logo-text"><span class="logo-name">Special <span>Home</span></span><span class="logo-tag">سبشال هوم للتطوير العقاري</span></span>
+        </a>
+        <p>شركة عقارية مصرية متخصصة في انتقاء وتسويق الوحدات السكنية والاستثمارية بالمعادي والقاهرة الجديدة، بأسعار شفافة وجولات افتراضية 360°.</p>
+        <div class="rating-inline" style="color:#93a4c4"><span class="stars">★★★★☆</span> <b style="color:#fff">3.8</b> — 8 مراجعات جوجل</div>
+        <div class="socials">
+          <a class="fb" href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="فيسبوك"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 12a10 10 0 1 0-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.5 1.49-3.89 3.77-3.89 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.78l-.45 2.89h-2.33v6.99A10 10 0 0 0 22 12Z"/></svg></a>
+          <a href="mailto:specialhome.eg1@gmail.com" aria-label="إيميل"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 6 10-6"/></svg></a>
+          <a href="https://wa.me/201001234567" target="_blank" rel="noopener" aria-label="واتساب"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.46 1.32 4.96L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2Zm5.8 14.16c-.24.68-1.42 1.32-1.95 1.36-.5.05-.98.24-3.3-.69-2.78-1.1-4.55-3.96-4.69-4.15-.14-.19-1.12-1.49-1.12-2.84 0-1.35.71-2.01.96-2.29.25-.28.55-.35.73-.35.18 0 .37 0 .53.01.17.01.4-.06.63.48.24.55.81 1.9.88 2.04.07.14.12.3.02.49-.1.19-.14.3-.28.47-.14.16-.3.36-.43.49-.14.14-.29.29-.13.57.16.28.71 1.17 1.53 1.9 1.05.94 1.94 1.23 2.22 1.37.28.14.44.12.61-.07.16-.19.69-.81.88-1.08.19-.28.37-.23.63-.14.26.09 1.65.78 1.93.92.28.14.47.21.54.33.07.12.07.69-.17 1.37Z"/></svg></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4 class="footer-title">روابط سريعة</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">الرئيسية</a></li>
+          <li><a href="projects.html">المشاريع</a></li>
+          <li><a href="about.html">عن الشركة</a></li>
+          <li><a href="blog.html">المدونة</a></li>
+          <li><a href="contact.html">تواصل معنا</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4 class="footer-title">أهم الخدمات</h4>
+        <ul class="footer-links">
+          <li><a href="project-details.html#tour">الجولة الافتراضية 360°</a></li>
+          <li><a href="projects.html">حجز موعد معاينة</a></li>
+          <li><a href="contact.html#form">استشارة مجانية</a></li>
+          <li><a href="blog.html">دليل الشراء الذكي</a></li>
+          <li><a href="contact.html">خططات الدفع والتقسيط</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4 class="footer-title">تواصل معنا</h4>
+        <ul class="footer-contact">
+          <li><span class="f-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></span><span>المعادي — القاهرة<br>القاهرة الجديدة — التجمع الخامس</span></li>
+          <li><span class="f-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg></span><a href="tel:+201001234567" class="num" dir="ltr">+20 100 123 4567</a></li>
+          <li><span class="f-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 6 10-6"/></svg></span><a href="mailto:specialhome.eg1@gmail.com">specialhome.eg1@gmail.com</a></li>
+        </ul>
+        <h4 class="footer-title" style="margin-top:24px">النشرة البريدية</h4>
+        <p style="margin-bottom:0">أحدث المشاريع والأسعار مباشرة على إيميلك.</p>
+        <form class="newsletter" id="newsletterForm">
+          <input type="email" placeholder="بريدك الإلكتروني" required>
+          <button type="submit">اشترك</button>
+        </form>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="year">2026</span> Special Home — جميع الحقوق محفوظة.</span>
+      <div class="fb-links"><a href="#">سياسة الخصوصية</a><a href="#">الشروط والأحكام</a></div>
+    </div>
+  </div>
+</footer>
+
+<a href="https://wa.me/201001234567" class="whatsapp-float" target="_blank" rel="noopener" aria-label="تواصل واتساب">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.46 1.32 4.96L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2Zm5.8 14.16c-.24.68-1.42 1.32-1.95 1.36-.5.05-.98.24-3.3-.69-2.78-1.1-4.55-3.96-4.69-4.15-.14-.19-1.12-1.49-1.12-2.84 0-1.35.71-2.01.96-2.29.25-.28.55-.35.73-.35.18 0 .37 0 .53.01.17.01.4-.06.63.48.24.55.81 1.9.88 2.04.07.14.12.3.02.49-.1.19-.14.3-.28.47-.14.16-.3.36-.43.49-.14.14-.29.29-.13.57.16.28.71 1.17 1.53 1.9 1.05.94 1.94 1.23 2.22 1.37.28.14.44.12.61-.07.16-.19.69-.81.88-1.08.19-.28.37-.23.63-.14.26.09 1.65.78 1.93.92.28.14.47.21.54.33.07.12.07.69-.17 1.37Z"/></svg>
+</a>
+<button class="to-top" id="toTop" aria-label="العودة للأعلى">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5"/><path d="m5 12 7-7 7 7"/></svg>
+</button>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Editors
+.vscode/
+.idea/
+*.sublime-workspace
+
+# Logs & OS
+*.log
+.DS_Store
+
+# Local env
+.env
